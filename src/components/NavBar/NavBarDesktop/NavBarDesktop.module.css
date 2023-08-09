@@ -1,0 +1,99 @@
+.nav {
+  width: 100%;
+  background-color: #f8f6f6;
+}
+
+.navUl {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  font-size: 12px;
+}
+
+.item,
+.logo {
+  list-style: none;
+}
+
+.item {
+  transition: text-shadow 0.2s;
+}
+
+.item:hover {
+  text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
+}
+@supports (-webkit-text-stroke-width: 0.04ex) {
+  /* 2017+, mobile 2022+ */
+  .item:hover {
+    text-shadow: -0.03ex 0 0 currentColor, 0.03ex 0 0 currentColor;
+    -webkit-text-stroke-width: 0.04ex;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  background-color: #f8f6f6;
+}
+
+.itemLink {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+  color: black;
+}
+
+.logo {
+  width: 200px;
+}
+
+.cartWidgetContainer,
+.whatsAppWidgetContainer {
+  position: relative;
+  color: black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cartWidgetContainer:hover .cartIcon,
+.whatsAppWidgetContainer:hover .whatsAppIcon {
+  transform: scale(1.1);
+}
+
+.whatsAppWidgetContainer:hover .whatsAppIcon {
+  color: #25d366;
+}
+
+.cartIcon,
+.whatsAppIcon {
+  font-size: 1.8rem;
+  padding: 3px;
+  color: black;
+}
+
+.numberOfItems {
+  font-size: 9px;
+  position: absolute;
+  top: 32px;
+  right: 18px;
+  z-index: 10;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  height: 14px;
+  width: 14px;
+  text-align: center;
+}
+
+@media (min-width: 850px) {
+  .logoContainer {
+    gap: 20%;
+  }
+}

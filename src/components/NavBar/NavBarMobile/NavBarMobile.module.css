@@ -1,0 +1,168 @@
+.nav {
+  width: 100%;
+}
+
+.navActive {
+  display: block;
+  position: fixed;
+}
+
+.navInactive {
+  display: none;
+}
+
+.navUl {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  font-size: 12px;
+  background-color: #e9e9e9;
+  margin: 10px;
+  height: 60vh;
+  padding: 20px 0 0 0px;
+  overflow-x: hidden;
+  left: 0;
+  border-radius: 5px;
+}
+
+.item,
+.logo {
+  list-style: none;
+}
+
+.item {
+  transition: text-shadow 0.2s;
+  padding: 0px 0 0 20px;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid #bdbcbc;
+}
+
+.menuContainer {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  row-gap: 50px;
+  width: 100%;
+  bottom: 0;
+  background-color: #e9e9e9;
+  align-items: center;
+  padding: 5px;
+  z-index: 500;
+}
+
+.itemLink {
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  padding: 8px 0;
+  color: black;
+}
+
+.activateNav {
+  position: relative;
+  color: black;
+  height: 35px;
+  width: 35px;
+  font-size: 35px;
+  background-color: #e1e1e1;
+  top: -25px;
+  text-align: center;
+  box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, #e1e1e1 0px 0px 0px 3px;
+  border-radius: 50%;
+}
+
+.item:hover {
+  text-shadow: -0.06ex 0 0 currentColor, 0.06ex 0 0 currentColor;
+}
+
+.contactIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@supports (-webkit-text-stroke-width: 0.04ex) {
+  /* 2017+, mobile 2022+ */
+  .item:hover {
+    text-shadow: -0.03ex 0 0 currentColor, 0.03ex 0 0 currentColor;
+    -webkit-text-stroke-width: 0.04ex;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  background-color: #f8f6f6;
+}
+
+.logo {
+  width: 200px;
+}
+
+.cartWidgetContainer {
+  position: relative;
+  color: black;
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.whatsAppWidgetContainer,
+.gitHubIcon {
+  position: relative;
+  color: black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cartWidgetContainer:hover .cartIcon,
+.whatsAppWidgetContainer:hover .whatsAppIcon,
+.gitHubIcon {
+  transform: scale(1.1);
+}
+
+.whatsAppWidgetContainer:hover .whatsAppIcon {
+  color: #25d366;
+}
+
+.cartIcon,
+.whatsAppIcon {
+  font-size: 1.8rem;
+  padding: 3px;
+  color: black;
+}
+
+.gitHubIcon {
+  font-size: 1.5rem;
+}
+
+.numberOfItems {
+  font-size: 9px;
+  position: absolute;
+  top: 32px;
+  right: 18px;
+  z-index: 10;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  height: 14px;
+  width: 14px;
+  text-align: center;
+}
+
+@media (min-width: 850px) {
+  .logoContainer {
+    gap: 20%;
+  }
+}

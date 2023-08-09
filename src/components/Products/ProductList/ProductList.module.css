@@ -1,0 +1,23 @@
+.productListContainer {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 95%;
+  margin: auto;
+}
+
+.loaderSpinner {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+@media (min-width: 800px) {
+  .productListContainer {
+    width: 85%;
+  }
+}
