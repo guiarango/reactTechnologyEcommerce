@@ -1,9 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 
-//Utils
-import { addToCartAction } from "../../../Utils/Cart";
-
 //Components
 import Button from "../../UI/Button";
 import AddToCartModal from "../../UI/Modals/AddToCartModal";
@@ -21,7 +18,7 @@ const ProductItem = ({ productInfo }) => {
   const dispatchAction = useDispatch();
 
   const addToCart = useCallback((event) => {
-    addToCartAction(event);
+    event.preventDefault();
     dispatchAction(addProductToCart(productInfo));
     setActiveAddToCartModal(productInfo);
   }, []);

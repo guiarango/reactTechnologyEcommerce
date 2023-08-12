@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 //Fonts & Icons
 import {
-  BsBag,
   BsWhatsapp,
   BsFillFilterCircleFill,
   BsXCircleFill,
@@ -12,9 +12,11 @@ import {
 
 //Styles
 import classes from "./NavBarMobile.module.css";
+import CartIcon from "../CartIcon/CartIcon";
 
 const NavBarMobile = () => {
   const [activeNav, setActiveNav] = useState(false);
+  const cart = useSelector((state) => state.cart);
 
   const changeActiveNavState = useCallback(() => {
     setActiveNav((prev) => !prev);
@@ -48,8 +50,8 @@ const NavBarMobile = () => {
           {activeNav ? <BsXCircleFill /> : <BsFillFilterCircleFill />}
         </div>
         <div className={classes.cartWidgetContainer}>
-          <div className={classes.numberOfItems}>0</div>
-          <BsBag className={classes.cartIcon} />
+          <div className={classes.numberOfItems}>{cart.itemsCount}</div>
+          <CartIcon />
         </div>
       </div>
 
@@ -58,7 +60,7 @@ const NavBarMobile = () => {
           activeNav ? classes.navActive : classes.navInactive
         }`}
       >
-        <ul className={classes.navUl}>
+        <ul className={classes.navUl} onClick={changeActiveNavState}>
           <li className={classes.item}>
             <Link className={classes.itemLink} to={"/category/1"}>
               Accesories

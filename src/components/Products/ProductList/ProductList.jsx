@@ -42,7 +42,7 @@ const ProductList = (props) => {
         loader
       ) : (
         <div className={classes.productListContainer}>
-          {allProductsFiltered.map((product, index) => (
+          {allProductsFiltered.map((product) => (
             <ProductItem key={product.id} productInfo={product} />
           ))}
         </div>

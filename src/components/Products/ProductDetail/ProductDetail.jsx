@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-//Utils
-import { addToCartAction } from "../../../Utils/Cart";
-
 //Components
 import Button from "../../UI/Button";
 import Loader from "../../UI/Loader";
@@ -51,7 +48,7 @@ const ProductDetail = () => {
   );
 
   const addToCart = (event) => {
-    addToCartAction(event);
+    event.preventDefault();
     setActiveAddToCartModal(productDetail);
   };
 

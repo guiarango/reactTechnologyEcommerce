@@ -1,0 +1,18 @@
+.optionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+.button {
+  width: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.363);
+  border-radius: 3px;
+}
+
+.input {
+  width: 30px;
+  text-align: center;
+}

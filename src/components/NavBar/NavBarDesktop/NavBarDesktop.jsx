@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+//Components
+import CartIcon from "../CartIcon/CartIcon";
 
 //Fonts & Icons
-import { BsBag, BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 
 //Styles
 import classes from "./NavBarDesktop.module.css";
 
 const NavBarDesktop = () => {
+  const cart = useSelector((state) => state.cart);
+
   return (
     <>
       <div className={classes.logoContainer}>
@@ -22,8 +28,8 @@ const NavBarDesktop = () => {
           <img src="/images/logoDev.png" alt="Logo" />
         </Link>
         <div className={classes.cartWidgetContainer}>
-          <div className={classes.numberOfItems}>0</div>
-          <BsBag className={classes.cartIcon} />
+          <div className={classes.numberOfItems}>{cart.itemsCount}</div>
+          <CartIcon />
         </div>
       </div>
 

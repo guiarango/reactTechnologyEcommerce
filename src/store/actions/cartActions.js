@@ -5,3 +5,15 @@ export const addProductToCart = (productInfo) => {
     dispatch(cartActions.addProductToCart(productInfo));
   };
 };
+
+export const increaseProductQuantityByOne = (id) => {
+  return (dispatch) => {
+    dispatch(cartActions.increaseProductQuantityByOne(id));
+  };
+};
+
+export const decreaseProductQuantityByOne = (id) => {
+  return (dispatch) => {
+    dispatch(cartActions.decreaseProductQuantityByOne(id));
+  };
+};

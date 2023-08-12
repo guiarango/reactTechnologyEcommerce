@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import ProductList from "./components/Products/ProductList/ProductList";
 import ProductDetail from "./components/Products/ProductDetail/ProductDetail";
+import Checkout from "./components/Checkout/Checkout";
 import Error404 from "./components/Error/Error404";
 
 //Styles
@@ -31,6 +32,7 @@ function App() {
               path="/detail/:productId"
               element={<ProductDetail />}
             ></Route>
+            <Route path="/checkout" element={<Checkout />}></Route>
             <Route path="/error404" element={<Error404 />}></Route>
             <Route path="*" element={<Error404 />}></Route>
           </Routes>

@@ -7,7 +7,7 @@ import Card from "../Card";
 import Button from "../Button";
 
 // Styles
-import classes from "./ModalOverlay.module.css";
+import classes from "./AddToCartModal.module.css";
 
 const ModalOverlay = (props) => {
   const productInfo = props.productInfo;
@@ -17,11 +17,26 @@ const ModalOverlay = (props) => {
         <h2>Product added to cart</h2>
       </header>
       <div className={classes.content}>
-        <p>
-          You have just added a {productInfo.name} for a value of $
-          {productInfo.price * (1 - productInfo.discount)}
-        </p>
-        <p>Check the cart for more info</p>
+        <table className={classes.table}>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src={productInfo.url}
+                alt={productInfo.name}
+                className={classes["content-image"]}
+              />
+            </td>
+            <td>{productInfo.name}</td>
+            <td>{productInfo.price * (1 - productInfo.discount)}</td>
+            <td>x1</td>
+          </tr>
+        </table>
       </div>
       <footer className={classes.actions}>
         <Button onClick={props.onConfirm} className={classes.actionButton}>
