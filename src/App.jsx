@@ -5,10 +5,11 @@ import { Provider } from "react-redux";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-import ProductList from "./components/Products/ProductList/ProductList";
+import ProductsByCategory from "./components/Products/ProductByCategory/ProductsByCategory";
 import ProductDetail from "./components/Products/ProductDetail/ProductDetail";
 import Checkout from "./components/Checkout/Checkout";
 import Error404 from "./components/Error/Error404";
+import SearchResult from "./components/SearchResult/SearchResult";
 
 //Styles
 import classes from "./App.module.css";
@@ -26,12 +27,13 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route
               path="/category/:categoryId"
-              element={<ProductList />}
+              element={<ProductsByCategory />}
             ></Route>
             <Route
               path="/detail/:productId"
               element={<ProductDetail />}
             ></Route>
+            <Route path="/results" element={<SearchResult />}></Route>
             <Route path="/checkout" element={<Checkout />}></Route>
             <Route path="/error404" element={<Error404 />}></Route>
             <Route path="*" element={<Error404 />}></Route>

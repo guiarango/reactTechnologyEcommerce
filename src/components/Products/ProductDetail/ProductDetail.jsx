@@ -12,9 +12,14 @@ import classes from "./ProductDetail.module.css";
 //Services
 import { returnProductById } from "../../../services/Products";
 
+//Store
+import { useDispatch } from "react-redux";
+import { addProductToCart } from "../../../store/actions/cartActions";
+
 const ProductDetail = () => {
   const navigate = useNavigate();
   const params = useParams();
+  const dispatchAction = useDispatch();
   const productId = params.productId;
 
   const [activeAddToCartModal, setActiveAddToCartModal] = useState(null);
@@ -49,6 +54,7 @@ const ProductDetail = () => {
 
   const addToCart = (event) => {
     event.preventDefault();
+    dispatchAction(addProductToCart(productDetail));
     setActiveAddToCartModal(productDetail);
   };
 

@@ -73,7 +73,7 @@
 
 .addToCart {
   background-color: black;
-  width: 300px;
+  width: 80%;
   border-radius: 5px;
   margin-top: 15px;
 }
@@ -85,13 +85,14 @@
 
   .productDetail {
     flex-direction: row;
-    gap: 30px;
+    gap: 60px;
   }
 
   .productImage {
-    width: 80%;
+    width: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    max-width: 550px;
   }
 
   .price {
@@ -101,15 +102,11 @@
   .oldPrice {
     font-size: 20px;
   }
-}
 
-@media (min-width: 800px) {
-  .productDetail {
-    flex-direction: row;
-    gap: 60px;
-  }
-
-  .productImage {
-    max-width: 550px;
+  .addToCart {
+    background-color: black;
+    width: 300px;
+    border-radius: 5px;
+    margin-top: 15px;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 //Components
@@ -6,12 +6,12 @@ import ProductItem from "../ProductItem/ProductItem";
 import Loader from "../../UI/Loader";
 
 //Styles
-import classes from "./ProductList.module.css";
+import classes from "./ProductsByCategory.module.css";
 
 //Services
 import { returnItemsByCategory } from "../../../services/Products";
 
-const ProductList = (props) => {
+const ProductsByCategory = (props) => {
   const navigate = useNavigate();
   const params = useParams();
   const categoryId = params.categoryId;
@@ -38,7 +38,7 @@ const ProductList = (props) => {
 
   return (
     <>
-      {allProductsFiltered.length <= null ? (
+      {allProductsFiltered?.length == null ? (
         loader
       ) : (
         <div className={classes.productListContainer}>
@@ -51,4 +51,4 @@ const ProductList = (props) => {
   );
 };
 
-export default ProductList;
+export default ProductsByCategory;

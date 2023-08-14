@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 50px;
   background-color: #f8f6f6;
 }
 
@@ -50,6 +50,12 @@
   width: 200px;
 }
 
+.rightOptins {
+  display: flex;
+  align-items: center;
+  max-width: 250px;
+}
+
 .cartWidgetContainer,
 .whatsAppWidgetContainer {
   position: relative;
@@ -60,6 +66,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.whatsAppWidgetContainer {
+  width: 250px;
 }
 
 .cartWidgetContainer:hover .cartIcon,
@@ -82,7 +92,7 @@
   font-size: 9px;
   position: absolute;
   top: 32px;
-  right: 18px;
+  right: 17px;
   z-index: 10;
   background-color: black;
   color: white;
@@ -90,10 +100,4 @@
   height: 14px;
   width: 14px;
   text-align: center;
-}
-
-@media (min-width: 850px) {
-  .logoContainer {
-    gap: 20%;
-  }
 }

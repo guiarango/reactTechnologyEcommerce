@@ -31,7 +31,7 @@ const NavBar = () => {
 
   //Object to render
   const objectToRender =
-    windowDimensionsSelector.windowWidth <= 500 ? (
+    windowDimensionsSelector.windowWidth <= 800 ? (
       <NavBarMobile />
     ) : (
       <NavBarDesktop />

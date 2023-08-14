@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 //Components
 import CartIcon from "../CartIcon/CartIcon";
+import SearchBar from "../SearchBar/SearchBar";
 
 //Fonts & Icons
 import { BsWhatsapp } from "react-icons/bs";
@@ -27,9 +28,13 @@ const NavBarDesktop = () => {
         <Link className={classes.logo} to={"/"}>
           <img src="/images/logoDev.png" alt="Logo" />
         </Link>
-        <div className={classes.cartWidgetContainer}>
-          <div className={classes.numberOfItems}>{cart.itemsCount}</div>
-          <CartIcon />
+
+        <div className={classes.rightOptins}>
+          <SearchBar />
+          <div className={classes.cartWidgetContainer}>
+            <div className={classes.numberOfItems}>{cart.itemsCount}</div>
+            <CartIcon />
+          </div>
         </div>
       </div>
 
