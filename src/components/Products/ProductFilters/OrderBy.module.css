@@ -1,0 +1,16 @@
+.filterContainer {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+.select {
+  width: 150px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.select:focus {
+  outline: none;
+}

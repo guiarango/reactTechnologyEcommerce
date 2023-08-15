@@ -1,0 +1,59 @@
+.billingContainer {
+  top: 10vh;
+  left: 10%;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.header {
+  background: #e2e2e2;
+  padding: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  color: black;
+}
+
+.content {
+  padding: 20px 20px;
+  background-color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 70%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.submitButton {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .billingContainer {
+    width: 40%;
+  }
+}

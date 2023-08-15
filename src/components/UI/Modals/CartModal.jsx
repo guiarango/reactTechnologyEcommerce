@@ -78,7 +78,7 @@ const ModalOverlay = ({ onConfirm }) => {
       <div className={classes.content}>
         <table className={classes.table}>
           {cart.items.length <= 0 ? (
-            <h2>There are no products in cart</h2>
+            <h2>There are not products in your cart</h2>
           ) : (
             cartItems
           )}

@@ -68,12 +68,9 @@ const cart = createSlice({
       state.itemsCount = calculateItemsCount(state.items);
     },
 
-    // deleteProductFromCart(state, action) {
-    //   const productId = { id: action.payload };
-
-    //   const itemExist = productExists(state.items, productId);
-    //   itemExist.quantity--;
-    // },
+    deleteCart(state, action) {
+      return initialState;
+    },
   },
 });
 

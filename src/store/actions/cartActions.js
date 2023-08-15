@@ -17,3 +17,9 @@ export const decreaseProductQuantityByOne = (id) => {
     dispatch(cartActions.decreaseProductQuantityByOne(id));
   };
 };
+
+export const deleteCart = () => {
+  return (dispatch) => {
+    dispatch(cartActions.deleteCart());
+  };
+};

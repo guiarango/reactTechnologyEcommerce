@@ -11,8 +11,8 @@ export async function createOrder(order) {
 
 //Traer un documento por idOrder
 export async function returnSingleOrder(idOrder) {
-  const collectionProductsRef = doc(DB, "orders", idOrder);
-  const documentSnapshot = await getDoc(collectionProductsRef);
+  const collectionOrderRef = doc(DB, "orders", idOrder);
+  const documentSnapshot = await getDoc(collectionOrderRef);
   const info = {
     ...documentSnapshot.data(),
   };

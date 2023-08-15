@@ -1,0 +1,17 @@
+{
+  "firstName": {
+    "description": "*Please check that the field First Name has between 2 and 20 characters"
+  },
+  "lastName": {
+    "description": "*Please check that the field Last Name has between 2 and 20 characters"
+  },
+  "email": {
+    "description": "*Please check that the field Email has an email format e.g. test@test.com"
+  },
+  "phone": {
+    "description": "*Please check that the field Phone has between 7 and 13 characters"
+  },
+  "address": {
+    "description": "*Please check that the field Address is not empty"
+  }
+}

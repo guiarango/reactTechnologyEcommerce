@@ -11,7 +11,7 @@ import {
 } from "firebase/firestore";
 
 //get all documents
-export async function returnAllItems(productName) {
+export async function returnAllItems() {
   const collectionProductsRef = collection(DB, "Products");
   const q = query(collectionProductsRef);
   const querySnapshot = await getDocs(q);
