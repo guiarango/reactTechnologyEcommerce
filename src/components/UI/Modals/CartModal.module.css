@@ -20,7 +20,11 @@
 .content {
   padding: 1rem;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   max-height: 300px;
   overflow-y: scroll;
@@ -39,7 +43,11 @@
 
 .actions {
   padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: #e2e2e2;
 }
@@ -55,7 +63,11 @@
 }
 
 .itemsTotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: white;
   font-weight: bold;
@@ -74,6 +86,8 @@
   }
 
   .actions {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }

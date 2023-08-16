@@ -4,7 +4,11 @@
 }
 
 .navUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 5%;
   font-size: 12px;
@@ -16,6 +20,8 @@
 }
 
 .item {
+  -webkit-transition: text-shadow 0.2s;
+  -o-transition: text-shadow 0.2s;
   transition: text-shadow 0.2s;
 }
 
@@ -31,8 +37,14 @@
 }
 
 .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 50px;
   background-color: #f8f6f6;
@@ -51,7 +63,11 @@
 }
 
 .rightOptins {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-width: 250px;
 }
@@ -62,8 +78,14 @@
   color: black;
   width: 50px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
 }
@@ -74,6 +96,8 @@
 
 .cartWidgetContainer:hover .cartIcon,
 .whatsAppWidgetContainer:hover .whatsAppIcon {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 

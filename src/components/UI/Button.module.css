@@ -1,10 +1,13 @@
 .button {
   letter-spacing: 1px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   margin: 5px 5px 5px 5px;
   padding: 10px 20px;
   border: white;
   color: white;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
   transition: 0.1s;
   cursor: pointer;
 }
