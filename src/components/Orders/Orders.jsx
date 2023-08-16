@@ -23,6 +23,9 @@ const OrderResume = ({ onConfirm }) => {
 
   const returnOrder = async () => {
     const order = await returnSingleOrder(orderId);
+    if (order == null) {
+      navigate("/error404");
+    }
     setOrderInfo(order);
   };
 
@@ -70,7 +73,7 @@ const OrderResume = ({ onConfirm }) => {
       <div className={classes.content}>
         <table className={classes.table}>
           {orderInfo.items.length <= 0 ? (
-            <h2>There are not products in your cart</h2>
+            <h2>There are not products in this order</h2>
           ) : (
             orderItems
           )}

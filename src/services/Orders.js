@@ -13,6 +13,11 @@ export async function createOrder(order) {
 export async function returnSingleOrder(idOrder) {
   const collectionOrderRef = doc(DB, "orders", idOrder);
   const documentSnapshot = await getDoc(collectionOrderRef);
+
+  if (!documentSnapshot.data()) {
+    return null;
+  }
+
   const info = {
     ...documentSnapshot.data(),
   };

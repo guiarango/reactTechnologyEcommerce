@@ -1,0 +1,96 @@
+.homeContainer {
+  padding-bottom: 70px;
+}
+
+.hero {
+  margin: 10px 10px;
+}
+
+.banner {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner2 {
+  background-image: url("/images/Sale-Mobile.jpg");
+}
+.banner1 {
+  background-image: url("/images/Apple-Mobile.jpg");
+}
+
+.categories {
+  margin: 10px 10px;
+}
+
+.categoryBanner {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+}
+
+.category1 {
+  background-image: url("/images/Accesories-category.jpg");
+}
+.category2 {
+  background-image: url("/images/Cellphones-category.jpg");
+}
+
+.category3 {
+  background-image: url("/images/Tablets-category.jpg");
+}
+.category4 {
+  background-image: url("/images/Computers-category.jpg");
+}
+.category5 {
+  background-image: url("/images/TV-category.jpg");
+}
+
+.categoryTitle {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  background-color: #00000075;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    margin: 20px 30px;
+  }
+
+  .banner {
+    height: 350px;
+  }
+  .banner2 {
+    background-image: url("/images/Sale-Desktop.jpg");
+  }
+  .banner1 {
+    background-image: url("/images/Apple-Desktop.jpg");
+  }
+
+  .categories {
+    margin: 20px 30px;
+  }
+
+  .categoryBanner {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .banner {
+    height: 450px;
+  }
+
+  .categoryBanner {
+    height: 350px;
+  }
+}
